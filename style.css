@@ -11,7 +11,7 @@ body {
 
 /* Class untuk mengatur gambar background */
 .background {
-    background-image: url(img/Games.jpg);
+    background-image: url(./img/Games.jpg);
     background-size: 1520px 800px;
     background-repeat: no-repeat;
 }
