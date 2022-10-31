@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Judul Halaman -->
+    <title>Trailer Resident Evil 4 Remake Baru Hadirkan Ashley, Ada Wong, dan Lainnya</title>
+    <!-- Link untuk menghubungkan file html dengan file css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Script kit untuk mengambil ikon dari web fontawsome -->
+    <script src="https://kit.fontawesome.com/088ba00b93.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Bagian navigasi bar -->
+    <div class="navbar">
+        <h2>Koran Game</h2>
+        <!-- Ikon game controller dari web fontawsome untuk judul -->
+        <button>
+            <i class="fa-solid fa-gamepad"></i>
+        </button>
+        <!-- Ikon lensa pencarian dari web fontawsome untuk tombol pencarian -->
+        <button class="buttonKanan">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <!-- Ikon lonceng  dari web fontawsome untuk tombol notifikasi -->
+        <button class="buttonKanan" onclick="notifikasi()">
+            <i class="fa-solid fa-bell"></i>
+        </button>
+        <!-- Menu untuk pindah ke halaman berita mobile -->
+        <a href="Mobile.html"><strong>Mobile</strong></a>
+        <!-- Menu untuk pindah ke halaman berita console -->
+        <a href="Console.html"><strong>Console</strong></a>
+        <!-- Menu untuk pindah ke halaman berita pc -->
+        <a href="PC.html"><strong>PC</strong></a>
+        <!-- Menu untuk pindah ke halaman home -->
+        <a href="KoranGame.html"><strong>Home</strong></a>
+    </div>
+
+    <!-- Bagian konten berita yang berisi gambar, artikel dan, video berita -->
+    <div class="Berita">
+        <article>
+            <h2 class="textTengah">Trailer Resident Evil 4 Remake Baru Hadirkan Ashley, Ada Wong, dan Lainnya</h2>
+            <p class="textTengah"><img src="/img/RE2.jpg" alt="Resident Evil 4 Remake" width="700px"></p>
+            <p>
+                Setelah mengumumkan Resident Evil 4 Remake melalui Capcom Showcase 2022 dan Tokyo Games Show 2022, 
+                kali ini Capcom kembali menampilkan sebuah trailer Resident Evil 4 Remake terbaru 
+                yang disambut antusias oleh kalangan penggemar dan juga gamer. Trailer kali ini menampilkan gameplay 
+                di mana kita kembali melihat Leon ke desa misterius diiringi kejadian – kejadian aneh di dalamnya.
+                Trailer Resident Evil 4 kali ini diumumkan lewat Resident Evil Showcase, 
+                di mana kalian dapat melihat Ashley Graham, Ada Wong, dan karakter lainnya dalam cuplikan video. 
+                Walau tak mendeskripsikan secara jelas, tampak bahwa game ini 
+                kembali mengambil cerita dibalik penyebaran Los Plagas di sebuah desa di Spanyol. 
+                Selain itu, video juga memperlihatkan improvisasi karakter Ramon Salazar, karakter villain 
+                yang tentunya telah dikenal fans dan para gamer. Bagi yang belum tahu, Ashley Graham 
+                merupakan putri kandung Presiden yang dikabarkan menghilang. Dalam versi remake, kalian dapat melihat Ashley 
+                dengan gaya rambut baru dan tampak sedikit tua. Di sisi villain, Salazar 
+                sedikit kurang menonjolkan aura jahatnya di dalam video. Meskipun begitu, 
+                ia masih mempertahankan gaya Eropa abad ke-18 yang kita kenal hingga saat ini.
+            </p>
+            <p class="textTengah"><iframe width="640" height="360" src="https://www.youtube.com/embed/-L1EuRo54pI" title="Resident Evil 4 - State of Play June 2022 Announcement Trailer | PS5 Games" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+            <p>
+                Tambahan lain, Capcom juga menampilkan beberapa karakter lainnya dalam trailer Resident Evil 4 Remake. 
+                Mereka kembali menghadirkan sang Merchant what do you buyin’? juga fitur inventory ala Tetris seperti versi aslinya.
+                Game ini dijadwalkan akan rilis tanggal 24 Maret 2023 di PS4, PS5, Xbox Series X|S, dan PC.
+            </p>
+            <br><br><br>
+            <h3>Kolom Komentar</h3>
+            <div class="kolomKomentar" id="kolomKomentar">
+                <label>Nama Pengirim: </label><input type="text" id="nama"><br><br>
+                <textarea id="komentar" cols="100" rows="10">Isikan Komentar di Sini</textarea><br>
+                <button type="submit" onclick="komentar()"><strong>Submit</strong></button>
+            </div>
+        </article>
+    </div>
+
+    <!-- Javascript untuk alert notifikasi dan fitur komentar -->
+    <script type="text/javascript">
+        // Script untuk fitur notifikasi
+        function notifikasi() {
+            confirm("Apakah Anda Ingin Berlangganan Notifikasi Koran Game?");
+        }
+        // Script untuk fitur komentar
+        function komentar(){
+            var nama = document.getElementById("nama").value;
+            var komentar = document.getElementById("komentar").value;
+            if (nama == '' && komentar == '') {
+                alert("Nama Pengirim dan Komentar Harus Diisi!");
+                return false;
+            } else if (nama == '') {
+                alert("Nama Pengirim Harus Diisi!");
+                return false;
+            } else if (komentar == '') {
+                alert("Komentar Harus Diisi!");
+                return false;
+            } else {
+                var h3 = document.createElement("h3");
+                var pengirim = document.createTextNode(nama);
+                h3.appendChild(pengirim);
+                document.getElementById("kolomKomentar").appendChild(h3);
+                var p = document.createElement("p");
+                var isi = document.createTextNode(komentar);
+                p.appendChild(isi);
+                document.getElementById("kolomKomentar").appendChild(p);
+                return true;
+            }
+        }
+    </script>
+
+    <!-- Bagian footer halaman yang berisi copyright dan sosial media -->
+    <footer>
+        <hr>
+        <div class="icon">
+            <a href="https://www.facebook.com/hilmi.mughid/"><img src="img/FB.png" alt="Facebook" width="50px"></a>
+            <a href="https://www.instagram.com/hilmimughid/?hl=id"><img src="img/IG.png" alt="Instagram" width="50px"></a>
+            <a href="https://twitter.com/h_mughid"><img src="img/Twitter.png" alt="Twitter" width="50px"></a> 
+        </div>
+        <p style="margin: 0;">Copyright &copy; 2022 by Hilmi Mughid </p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Judul Halaman -->
+    <title>Game Need for Speed Unbound Diumumkan, Hadirkan Visual Unik dan Berbeda</title>
+    <!-- Link untuk menghubungkan file html dengan file css -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Script kit untuk mengambil ikon dari web fontawsome -->
+    <script src="https://kit.fontawesome.com/088ba00b93.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Bagian navigasi bar -->
+    <div class="navbar">
+        <h2>Koran Game</h2>
+        <!-- Ikon game controller dari web fontawsome untuk judul -->
+        <button>
+            <i class="fa-solid fa-gamepad"></i>
+        </button>
+        <!-- Ikon lensa pencarian dari web fontawsome untuk tombol pencarian -->
+        <button class="buttonKanan">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <!-- Ikon lonceng  dari web fontawsome untuk tombol notifikasi -->
+        <button class="buttonKanan" onclick="notifikasi()">
+            <i class="fa-solid fa-bell"></i>
+        </button>
+        <!-- Menu untuk pindah ke halaman berita mobile -->
+        <a href="Mobile.html"><strong>Mobile</strong></a>
+        <!-- Menu untuk pindah ke halaman berita console -->
+        <a href="Console.html"><strong>Console</strong></a>
+        <!-- Menu untuk pindah ke halaman berita pc -->
+        <a href="PC.html"><strong>PC</strong></a>
+        <!-- Menu untuk pindah ke halaman home -->
+        <a href="KoranGame.html"><strong>Home</strong></a>
+    </div>
+
+    <!-- Bagian konten berita yang berisi gambar, artikel dan, video berita -->
+    <div class="Berita">
+        <article>
+            <h2 class="textTengah">Game Need for Speed Unbound Diumumkan, Hadirkan Visual Unik dan Berbeda</h2>
+            <p class="textTengah"><img src="/img/NFS3.png" alt="Need For Speed Unbound" width="700px"></p>
+            <p>
+                Need for Speed Unbound Diumumkan – Melalui akun youtube resminya, 
+                Need for Speed tampilkan trailer dari game terbaru mereka yaitu NFS Unbound. 
+                Pada trailer ini ditampikan visual in-game dan gameplay dari seri terbaru besutan Electornic Art (EA) tersebut.
+                Melalui kanal youtubenya, Need for Speed mengumumkan tiltle terbarunya yaitu NFS Unbound. 
+                Serial NSF ini digarap kembali oleh Criterion Games, studio yang juga menggarap NFS Heat dan NFS Hot Pursuit. 
+                Kembali mengusung tema street racing, dalam trailer yang dirilis 
+                pada 6 Oktober 2022 ini terlihat adanya perubahan artstyle yang cukup signifikan dibandingkan seri sebelumnya, 
+                dimana  game ini  tampil dengan gabungan animasi bernuansa Street Art  dan visual realistik ala NFS Heat.
+                Selain perubahan artstyle, dalam trailer ini juga diperlihatkan tampilan lain 
+                yang juga akan menjadi konten game ini seperti adegan kejar-kejaran dengan polisi, 
+                efek animasi saat menggunakan nitro yang bisa diubah dan didapatkan seiring progres kita bermain, 
+                dan fitur modifikasi mobil. Dalam trailer tersebut juga menampilkan sosok penyanyi A$AP Rocky 
+                yang menjadi salah satu karakter in-game yang juga diiringi lagunya 
+                yang berjudul “Shittin Me” berdampingan dengan mobil miliknya yaitu Mercedes 190E.
+            </p>
+            <p class="textTengah"><iframe width="640" height="360" src="https://www.youtube.com/embed/H2Y8XCe7F9E" title="Need for Speed Unbound - Official Reveal Trailer (ft. A$AP Rocky)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+            <p>
+                NFS Unbound sendiri akan rilis di platform PS 5, Xbox Seri X|S dan PC. 
+                Game ini rencananya akan dirilis pada 2 Desember 2022 mendatang. 
+                Walaupun begitu pre-order untuk game ini telah mulai dibuka bagi kalian yang ingin meemesan game ini lebih awal.
+            </p>
+            <br><br><br>
+            <h3>Kolom Komentar</h3>
+            <div class="kolomKomentar" id="kolomKomentar">
+                <label>Nama Pengirim: </label><input type="text" id="nama"><br><br>
+                <textarea id="komentar" cols="100" rows="10">Isikan Komentar di Sini</textarea><br>
+                <button type="submit" onclick="komentar()"><strong>Submit</strong></button>
+            </div>
+        </article>
+    </div>
+
+    <!-- Javascript untuk alert notifikasi dan fitur komentar -->
+    <script type="text/javascript">
+        // Script untuk fitur notifikasi
+        function notifikasi() {
+            confirm("Apakah Anda Ingin Berlangganan Notifikasi Koran Game?");
+        }
+        // Script untuk fitur komentar
+        function komentar(){
+            var nama = document.getElementById("nama").value;
+            var komentar = document.getElementById("komentar").value;
+            if (nama == '' && komentar == '') {
+                alert("Nama Pengirim dan Komentar Harus Diisi!");
+                return false;
+            } else if (nama == '') {
+                alert("Nama Pengirim Harus Diisi!");
+                return false;
+            } else if (komentar == '') {
+                alert("Komentar Harus Diisi!");
+                return false;
+            } else {
+                var h3 = document.createElement("h3");
+                var pengirim = document.createTextNode(nama);
+                h3.appendChild(pengirim);
+                document.getElementById("kolomKomentar").appendChild(h3);
+                var p = document.createElement("p");
+                var isi = document.createTextNode(komentar);
+                p.appendChild(isi);
+                document.getElementById("kolomKomentar").appendChild(p);
+                return true;
+            }
+        }
+    </script>
+
+    <!-- Bagian footer halaman yang berisi copyright dan sosial media -->
+    <footer>
+        <hr>
+        <div class="icon">
+            <a href="https://www.facebook.com/hilmi.mughid/"><img src="img/FB.png" alt="Facebook" width="50px"></a>
+            <a href="https://www.instagram.com/hilmimughid/?hl=id"><img src="img/IG.png" alt="Instagram" width="50px"></a>
+            <a href="https://twitter.com/h_mughid"><img src="img/Twitter.png" alt="Twitter" width="50px"></a> 
+        </div>
+        <p style="margin: 0;">Copyright &copy; 2022 by Hilmi Mughid </p>
+    </footer>
+</body>
+</html>
