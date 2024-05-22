@@ -1,100 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Judul Halaman -->
-    <title>Koran Game</title>
-    <!-- Link untuk menghubungkan file html dengan file css -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Script kit untuk mengambil ikon dari web fontawsome -->
-    <script src="https://kit.fontawesome.com/088ba00b93.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <link href="src/output.css" rel="stylesheet">
 </head>
 
-<!-- Bagian body yang menggunakan background gambar -->
-<body class="background">
-    <!-- Bagian navigasi bar -->
-    <div class="navbar">
-        <h2>Koran Game</h2>
-        <!-- Ikon game controller dari web fontawsome untuk judul -->
-        <button>
-            <i class="fa-solid fa-gamepad"></i>
-        </button>
-        <!-- Ikon lensa pencarian dari web fontawsome untuk tombol pencarian -->
-        <button class="buttonKanan">
-            <i class="fa-solid fa-magnifying-glass"></i>
-        </button>
-        <!-- Ikon lonceng  dari web fontawsome untuk tombol notifikasi -->
-        <button class="buttonKanan" onclick="notifikasi()">
-            <i class="fa-solid fa-bell"></i>
-        </button>
-        <!-- Menu untuk pindah ke halaman berita mobile -->
-        <a href="Mobile.html"><strong>Mobile</strong></a>
-        <!-- Menu untuk pindah ke halaman berita console -->
-        <a href="Console.html"><strong>Console</strong></a>
-        <!-- Menu untuk pindah ke halaman berita pc -->
-        <a href="PC.html"><strong>PC</strong></a>
-        <!-- Menu untuk pindah ke halaman home -->
-        <a href="KoranGame.html"><strong>Home</strong></a>
-    </div>
+<body>
+
     
-    <!-- Bagian konten pada halaman home -->
-    <div class="home">
-        <!-- Gambar game controller -->
-        <img src="./img/Console Stick.png" alt="" width="500px">
-        <!-- Deskripsi singkat web -->
-        <h1>Selamat Datang di Koran Game</h1>
-        <h3>Website yang menyediakan berbagai berita game</h3>
-        <br><br><br><br><br><br><br><br><br><br><br>
-        <!-- Bagian yang berisi kategori berita -->
-        <h1>Kategori Berita</h1>
-        <table>
-            <tr>
-                <td class="isiTabel"><a href="PC.html"><img src="./img/PC.png" alt="PC" height="350px"></a></td>
-                <td class="isiTabel"><a href="Console.html"><img src="./img/PS.png" alt="PS" height="350px"></a></td>
-                <td class="isiTabel"><a href="Mobile.html"><img src="./img/HP.png" alt="HP" height="350px"></a></td>
-            </tr>
-            <tr>
-                <td><a href="PC.html"><h2>PC</h3></a></td>
-                <td><a href="Console.html"><h2>Console</h3></a></td>
-                <td><a href="Mobile.html"><h2>Mobile</h3></a></td>
-            </tr>
-        </table>
-        <br><br><br><br><br><br><br><br><br><br><br>
-        <!-- Bagian yang berisi berita trending -->
-        <h1>Berita Trending</h1>
-        <table>
-            <tr>
-                <td class="isiTabel"><a href="NFS.html"><img src="img/NFS.png" alt="Need For Speed Unbound" width="450px"></a></td>
-                <td class="isiTabel"><a href="RE4.html"><img src="img/RE.jpg" alt="Resident Evil 4 Remake" width="450px"></a></td>
-                <td class="isiTabel"><a href="MPL.html"><img src="img/MPL.jpg" alt="MPL Season 10" width="450px"></a></td>
-            </tr>
-            <tr>
-                <td><a href="NFS.html"><h2>Game Need for Speed Unbound Diumumkan, Hadirkan Visual Unik dan Berbeda</h2></a></td>
-                <td><a href="RE4.html"><h2>Trailer Resident Evil 4 Remake Baru Hadirkan Leon, Ashley, Ada Wong, dan Lainnya</h2></a></td>
-                <td><a href="MPL.html"><h2>ONIC Esports Jadi Juara MPL Indonesia Season 10!</h2></a></td>
-            </tr>
-        </table>
+
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4">
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg" alt="">
     </div>
-
-    <!-- Javascript untuk notifikasi -->
-    <script type="text/javascript">
-        function notifikasi() {
-            confirm("Apakah Anda Ingin Berlangganan Notifikasi Koran Game?");
-        }
-    </script>
-
-    <!-- Bagian footer halaman yang berisi copyright dan sosial media -->
-    <footer>
-        <hr>
-        <div>
-            <a href="https://www.facebook.com/hilmi.mughid/"><img src="./img/FB.png" alt="Facebook" width="50px"></a>
-            <a href="https://www.instagram.com/hilmimughid/?hl=id"><img src="./img/IG.png" alt="Instagram" width="50px"></a>
-            <a href="https://twitter.com/h_mughid"><img src="./img/Twitter.png" alt="Twitter" width="50px"></a> 
-        </div>
-        <br>
-        <p style="margin: 0;">Copyright &copy; 2022 by Hilmi Mughid </p>
-    </footer>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-1.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-6.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-7.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-8.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-9.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-10.jpg" alt="">
+    </div>
+    <div>
+        <img class="h-auto max-w-full rounded-lg" src="https://flowbite.s3.amazonaws.com/docs/gallery/square/image-11.jpg" alt="">
+    </div>
+</div>
 </body>
+
 </html>
